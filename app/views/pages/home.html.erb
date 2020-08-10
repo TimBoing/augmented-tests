@@ -4,12 +4,18 @@
 
 <a-scene embedded arjs>
   <a-marker preset="hiro">
+ <!--    <a-entity
+      position="0 0 0"
+      scale="1 1 1"
+      gltf-model="<#= asset_path 'robot.glb' %>"
+    ></a-entity> -->
     <a-entity
       position="0 0 0"
       scale="1 1 1"
-      gltf-model="<%= asset_path 'robot.glb' %>"
+      gltf-model="<%= asset_path 'planet.glb' %>"
     ></a-entity>
     <a-entity light="type: point; intensity: 10; distance: 50; decay: 2"
               position="0 1 4"></a-entity>  </a-marker>
   <a-entity camera></a-entity>
 </a-scene>
+
