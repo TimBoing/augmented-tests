@@ -17,7 +17,7 @@ class PagesController < ApplicationController
   end
 
   def uploader
-    file_path = "../../../Desktop/Blender/objets/bouteille_option2_7.glb"
+    file_path = "../../../Desktop/Blender/objets/bouteille_augmented.glb"
     Cloudinary::Uploader.upload(file_path, use_filename: true, resource_type: :raw)
 
   end
