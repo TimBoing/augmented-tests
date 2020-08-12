@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
   def home
-    # file_path = "../../../Desktop/Blender/objets/robot_project_texture_paint.glb"
-    # Cloudinary::Uploader.upload(file_path, use_filename: true, resource_type: :raw)
+
   end
 
   def planet
@@ -12,6 +11,15 @@ class PagesController < ApplicationController
   end
 
   def island
+  end
+
+  def bottle
+  end
+
+  def uploader
+    file_path = "../../../Desktop/Blender/objets/bottle_material_work.glb"
+    Cloudinary::Uploader.upload(file_path, use_filename: true, resource_type: :raw)
+
   end
 
 end
