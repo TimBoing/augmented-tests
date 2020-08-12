@@ -1,15 +1,25 @@
-<a-scene embedded arjs>
+<a-scene embedded arjs renderer="logarithmicDepthBuffer: true;">
+
+  <a-assets>
+    <a-asset-item id="bottle" src="<%= cloudinary_url("bouteille_augmented_j8e1xa.glb",resource_type: :raw) %>"></a-asset-item>
+  </a-assets>
+
   <a-marker preset="hiro">
+
     <a-entity
       position="0 0 0"
-      scale="0.5 0.5 0.5"
-      gltf-model="<%= cloudinary_url("bouteille_augmented_nct1ub.glb",resource_type: :raw) %>"
+      scale="1 1 1"
+      gltf-model="#bottle"
     ></a-entity>
 
-  <a-entity light="type: point; intensity: 10; distance: 50; decay: 2"
+  <a-entity light="type: point; intensity: 8; distance: 50; decay: 2"
     position="0 1 10"></a-entity>  </a-marker>
   <a-entity camera></a-entity>
-  <a-entity light="type: point; intensity: 10; distance: 50; decay: 2"
+  <a-entity light="type: point; intensity: 8; distance: 50; decay: 2"
+    position="5 1 -10"></a-entity>  </a-marker>
+  <a-entity camera></a-entity>
+
+<!--   <a-entity light="type: point; intensity: 10; distance: 50; decay: 2"
     position="0 1 -10"></a-entity>  </a-marker>
   <a-entity camera></a-entity>
   <a-entity light="type: point; intensity: 10; distance: 50; decay: 2"
@@ -17,6 +27,6 @@
   <a-entity camera></a-entity>
   <a-entity light="type: point; intensity: 10; distance: 50; decay: 2"
     position="-10 1 0"></a-entity>  </a-marker>
-  <a-entity camera></a-entity>
+  <a-entity camera></a-entity> -->
 </a-scene>
 
